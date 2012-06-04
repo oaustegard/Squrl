@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// The intent is to achieve decent compresssion (a 6 digit base32 numeral ~ a 10 digit base10 numeral)
 /// while remaining easily legible and communicable.  The latter is achieved by only using lowercase digits that 
 /// can't be easily misread: o, 0, and O are all interpreted as 0, and I, l, 1 and i are all interpreted as 1, etc
-/// Note that the check provided by Crockford is not implemented
+/// Note that the checksum provided by Crockford is not implemented
 /// </summary>
 public class HumanBase32
 {
