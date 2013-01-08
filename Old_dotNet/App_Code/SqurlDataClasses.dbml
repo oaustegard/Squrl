@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<Database Name="C:\PROJECTS\SQURL\APP_DATA\SQURL.MDF" Class="SqurlDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\squrl.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="squrlConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Squrl" Member="Squrls">
+    <Type Name="Squrl">
+      <Column Name="SqurlId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="AccessCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastAccess" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId1">
+      <Argument Parameter="url" Member="Url" />
+      <Argument Parameter="squrlId" Member="SqurlId" />
+    </InsertFunction>
+  </Table>
+  <Function Id="FunctionId1" Name="dbo.AddSqurl" Method="AddSqurl">
+    <Parameter Name="Url" Parameter="url" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="SqurlId" Parameter="squrlId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetSqurl" Method="GetSqurl">
+    <Parameter Name="SqurlId" Parameter="squrlId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Url" Parameter="url" Type="System.String" DbType="NVarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

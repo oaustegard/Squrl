@@ -1,0 +1,60 @@
+﻿body
+{
+  padding-top: 40px;
+  background-position: 0px 380px;
+  background-color: #6DACFF;
+  /*background-image: url( '../images/dangling_squirrel_cartoon.png' ); */
+  background-repeat: repeat-x;
+  font-family: Arial Rounded MT Bold;
+  font-size: 14pt;
+  line-height: 30px;
+  color: #703718;
+}
+a, a:visited
+{
+  color: #6DACFF;
+  text-decoration: none;
+}
+
+a:hover, a:active
+{
+  text-decoration: underline;
+}
+
+#main
+{
+  text-align: center;
+}
+#results
+{
+  width: 500px;
+  padding: 10px;
+  margin: 20px auto 0px auto;
+  border: solid 2px #703718;
+  background-color: #fff;
+}
+input 
+{
+  border: solid 2px #703718;
+  font-size: 14pt;
+  height: 28px;
+  color: #703718;
+  vertical-align: middle;
+}
+.inputText
+{
+  width: 400px;
+  height: 28px;
+}
+.inputButton
+{
+  width: 120px;
+  height: 34px;
+  background-color: #D19765;
+  cursor: pointer;
+}
+.tiny
+{
+  font-size: 50%;
+}
+
